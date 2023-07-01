@@ -1,0 +1,12 @@
+<h1>SHow Image</h1>
+{% if key1 %}
+{% for i in key1 %} 
+Image Name:{{i.Imagename}}
+<br>
+<img src="{{MEDIA_URL}}{{i.Image.url}}" alt="">
+<br>
+{% endfor %} 
+{% endif %}
+<form action="{% url 'back' %}">
+    <input type="submit" value="Back">
+</form>
